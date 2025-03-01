@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const calculateBtn = document.querySelector("button");
-  const amountElem = document.querySelector('input[name="mortgageAmount"]');
+  const calculateBtn = document.querySelector("button");                  //to bring the button element into this javascript (DOM)
+  const amountElem = document.querySelector('input[name="mortgageAmount"]'); //to bring in the mortgage amount into the javascipt (DOM)
   const termElem = document.querySelector('input[name="mortgageTerm"]');
   const rateElem = document.querySelector('input[name="interestRate"]');
   const resultBox = document.querySelector(".box1 h3");
@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let mortgageType = document.querySelector(
       'input[name="mort_type"]:checked'
     ).id;
-    // console.log(mortgageType);
+
   
-    if (!principal.length || !years.length || !annualRate.length) {
-      alert("Please enter valid numbers");
+    if (!principal.length || !years.length || !annualRate.length) { //check if the user entered real values and alert them to do that 
+      alert("Please enter valid numbers");                          //if they did not
       return;
     }
 
@@ -34,7 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
       totalRepayment = M * n;
     }
 
-    resultBox.textContent = `Monthly Payment: $${M.toFixed(2)}`;
+    resultBox.textContent = `Monthly Payment: $${M.toFixed(2)}`; //To set your answer to two decimal places
     resultText.textContent = `Total Repayment: $${totalRepayment.toFixed(2)}`;
   });
 });
+
+//Read up on DOM on w3schools
