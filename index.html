@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
-  <title>Mortagae calculator</title>
+  <title>Mortagage calculator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
@@ -28,33 +28,52 @@
       <div class="body">
         <div class="amt">
           <p class="p1">Mortgage Amount</p>
-          <div class="rec1">
-            <p>$</p>
+          <!-- <div class="rec1">
+            <p class="dollar">$</p>
+            <p class="value">300,000</p>
+          </div> -->
+          <div class="formgroup">
+            <input type="number" name="mortgageAmount" />
+            <p class="dollar">$</p>
           </div>
         </div>
         <div class="mort">
           <div class="term">
             <p class="te">Mortgage Term</p>
-            <div class="rec2">
-              <p>years</p>
+            <!-- <div class="rec2">
+              <p class="years">years</p>
+              <p class="value">25</p>
+            </div> -->
+            <div class="formgroup">
+              <input type="number" name="mortgageTerm" />
+              <p class="years">years</p>
             </div>
           </div>
           <div class="rate">
             <p class="r">Interest Rate</p>
-            <div class="rec3">
-              <p>%</p>
+            <!-- <div class="rec3">
+              <p class="dollar">%</p>
+              <p class="value">5.25</p>
+            </div> -->
+            <div class="formgroup">
+              <input type="number" name="interestRate" />
+              <p class="percent">%</p>
             </div>
           </div>
         </div>
         <div class="mortgage">
           <p class="t">Mortgage Type</p>
           <div class="repayment">
-            <div class="circle1"></div>
-            <p>Repayment</p>
+            <!-- <div class="circle1"></div>
+            <p>Repayment</p> -->
+            <input type="radio" name="mort_type" id="repayment" checked/>
+            <label for="repayment">Repayment</label>
           </div>
           <div class="interest">
-            <div class="circle2"></div>
-            <p>Interest Only</p>
+            <!-- <div class="circle2"></div>
+            <p>Interest Only</p> -->
+            <input type="radio" name="mort_type" id="interest" />
+            <label for="interest">Interest Only</label>
           </div>
         </div>
       </div>
@@ -65,5 +84,6 @@
     </div>
   </div>
 </body>
+<script src="index.js"></script>
 
 </html>
